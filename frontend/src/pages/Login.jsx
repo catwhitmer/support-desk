@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "../features/auth/authSlice";
+import { login, reset } from "../features/auth/authSlice";
 import { toast } from "react-toastify";
 import { FaSignInAlt } from "react-icons/fa";
 
@@ -34,6 +34,7 @@ function Login() {
     };
 
     dispatch(login(userData));
+    dispatch(reset());
   };
 
   return (
