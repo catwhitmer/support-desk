@@ -40,7 +40,7 @@ function Register() {
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <input
-              type="password"
+              type="text"
               className="form-control"
               id="name"
               name="name"
