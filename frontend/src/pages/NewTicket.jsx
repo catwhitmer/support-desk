@@ -1,5 +1,5 @@
-function newTicket() {
+function NewTicket() {
   return <div>newTicket</div>;
 }
 
-export default newTicket;
+export default NewTicket;
