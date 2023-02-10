@@ -4,12 +4,12 @@ const noteSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      require: [true],
+      require: true,
       ref: "User",
     },
     ticket: {
       type: mongoose.Schema.Types.ObjectId,
-      require: [true],
+      require: true,
       ref: "Ticket",
     },
     text: {
