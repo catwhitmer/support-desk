@@ -3,11 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
 import { getTicket, closeTicket } from "../features/tickets/ticketSlice";
-import {
-  getNotes,
-  createNote,
-  reset as notesReset,
-} from "../features/notes/noteSlice";
+import { getNotes, createNote } from "../features/notes/noteSlice";
 import Spinner from "../components/Spinner";
 import BackButton from "../components/BackButton";
 import NoteItem from "../components/NoteItem";
@@ -70,16 +66,16 @@ function Ticket() {
     navigate("/tickets");
   };
 
-  // Open/Close modal
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
-
   // Create note submit
   const onNoteSubmit = (e) => {
     e.preventDefault();
-    dispatch(createNote({ noteText }, ticketId));
+    dispatch(createNote({ noteText, ticketId }));
     closeModal();
   };
+
+  // Open/Close modal
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
 
   return (
     <div className="ticket-page">

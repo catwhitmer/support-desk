@@ -33,7 +33,7 @@ export const getNotes = createAsyncThunk(
 // Create a ticket note
 export const createNote = createAsyncThunk(
   "notes/create",
-  async ({noteText, ticketId}, thunkAPI) => {
+  async ({ noteText, ticketId }, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
 
