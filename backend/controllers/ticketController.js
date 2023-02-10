@@ -135,7 +135,7 @@ const updateTicket = asyncHandler(async (req, res) => {
     { new: true }
   );
 
-  res.status(200).json(updateTicket);
+  res.status(200).json(updatedTicket);
 });
 
 module.exports = {
